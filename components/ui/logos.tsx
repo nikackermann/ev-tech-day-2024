@@ -28,7 +28,7 @@ export function Logo({ className }: any) {
 export function Logos({ className }: any) {
     return (
         <div>
-            <Image src={PartnerLogos} alt="Partner Logos" />
+            <Image src={PartnerLogos} alt="Partner Logos" priority />
         </div>
     );
 }
