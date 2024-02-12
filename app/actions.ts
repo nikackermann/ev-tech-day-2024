@@ -2,7 +2,7 @@
 
 import { db } from '@/lib/db';
 import { formSchema } from '@/lib/schema';
-import { Signups } from '@/lib/db';
+import { signups, Signup } from '@/lib/schema';
 import { revalidatePath } from 'next/cache';
 import { createSafeActionClient } from 'next-safe-action';
 import { Resend } from 'resend';
@@ -12,13 +12,11 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const action = createSafeActionClient();
 
-// import { EmailTemplate } from '@/components/email-template'
-
 export const createSafeSignup = action(
     formSchema,
     async ({ name, company, title, email }) => {
         const newSignup = await db
-            .insert(Signups)
+            .insert(signups)
             .values({
                 name,
                 company,
@@ -49,7 +47,7 @@ export const createSafeSignup = action(
 );
 
 export const fetchSignups = async () => {
-    const data = await db.select().from(Signups);
+    const data: Signup[] = await db.select().from(signups);
     revalidatePath('/signups');
     return data;
 };

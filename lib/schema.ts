@@ -1,4 +1,11 @@
 import { z } from 'zod';
+import {
+    pgTable,
+    serial,
+    text,
+    timestamp,
+    uniqueIndex,
+} from 'drizzle-orm/pg-core';
 
 export const formSchema = z.object({
     name: z.string().min(1, 'Name is required'),
@@ -7,4 +14,23 @@ export const formSchema = z.object({
     title: z.string().min(1, 'Title is required'),
 });
 
-export const signupSchema = z.object({});
+// Create a pgTable that maps to a table in your DB
+export const signups = pgTable(
+    'signups',
+    {
+        id: serial('id').primaryKey(),
+        name: text('name').notNull(),
+        company: text('company').notNull(),
+        title: text('title').notNull(),
+        email: text('email').notNull(),
+        createdAt: timestamp('createdat').defaultNow().notNull(),
+        event: text('event').notNull(),
+    },
+    (signups) => {
+        return {
+            uniqueIdx: uniqueIndex('unique_idx').on(signups.email),
+        };
+    }
+);
+
+export type Signup = typeof signups.$inferSelect;

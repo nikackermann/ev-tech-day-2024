@@ -7,14 +7,12 @@ export default async function Page() {
         <div className="bg-white">
             <div className="flex min-h-screen w-full flex-col px-4 py-6 md:px-6">
                 <header className="mb-6">
-                    <h1 className="text-3xl font-bold">
-                        Spring & Grinding Days
-                    </h1>
+                    <h1 className="text-3xl font-bold">EV Tech Day 2024</h1>
                     <p className="text-gray-500 dark:text-gray-400">
-                        All registrations for Spring & Grinding Days
+                        All current signups
                     </p>
                 </header>
-                <SignupsTable data={signups} />
+                <SignupsTable signups={signups} />
             </div>
         </div>
     );

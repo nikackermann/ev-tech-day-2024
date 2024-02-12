@@ -2,11 +2,12 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { RegisterForm } from '../components/register-form';
 import { Logo, Logos } from '@/components/ui/logos';
 import Banner from '@/components/ui/banner';
+import EventInfo from '@/components/event-info';
 
 export default function Home() {
     return (
         <main className="relative min-h-screen bg-[url('/bg-gradient.svg')] bg-cover bg-center bg-no-repeat">
-            <div className="md:p-5 md:pl-10 md:pt-8 mb-4 lg:mb-32">
+            <div className="md:p-5 md:pl-10 md:pt-8 mb-4 sm:mb-12 lg:mb-22">
                 <Logo />
             </div>
             <section className="mx-auto max-w-xl">
@@ -28,6 +29,7 @@ export default function Home() {
                             <Logos />
                         </CardHeader>
                         <CardContent>
+                            {/* <EventInfo /> */}
                             <RegisterForm />
                         </CardContent>
                     </Card>

@@ -7,19 +7,13 @@ import {
     Table,
     TableFooter,
 } from '@/components/ui/table';
+import { Signup } from '@/lib/schema';
 
-type Signup = {
-    id: number;
-    name: string;
-    company: string;
-    title: string;
-    email: string;
-    createdAt: Date;
-    event: string;
+type SignupsTableProps = {
+    signups: Signup[];
 };
 
-export function SignupsTable({ data }: any) {
-    console.log(data);
+export function SignupsTable({ signups }: SignupsTableProps) {
     return (
         <Table>
             <TableHeader>
@@ -34,7 +28,7 @@ export function SignupsTable({ data }: any) {
                 </TableRow>
             </TableHeader>
             <TableBody>
-                {data.map((item: Signup, index: number) => (
+                {signups.map((item, index) => (
                     <TableRow key={index}>
                         <TableCell>{item.id}</TableCell>
                         <TableCell>{item.name}</TableCell>
@@ -50,7 +44,7 @@ export function SignupsTable({ data }: any) {
             </TableBody>
             <TableFooter>
                 <TableRow>
-                    <TableCell colSpan={7}>{data.length}</TableCell>
+                    <TableCell colSpan={7}>{signups.length}</TableCell>
                 </TableRow>
             </TableFooter>
         </Table>
