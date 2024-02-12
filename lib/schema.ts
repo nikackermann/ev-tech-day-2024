@@ -6,3 +6,5 @@ export const formSchema = z.object({
     company: z.string().min(1, 'Company is required'),
     title: z.string().min(1, 'Title is required'),
 });
+
+export const signupSchema = z.object({});

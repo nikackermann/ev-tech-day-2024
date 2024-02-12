@@ -6,7 +6,7 @@ import Banner from '@/components/ui/banner';
 export default function Home() {
     return (
         <main className="relative min-h-screen bg-[url('/bg-gradient.svg')] bg-cover bg-center bg-no-repeat">
-            <div className="md:p-5 md:pl-10 md:pt-8 mb-32">
+            <div className="md:p-5 md:pl-10 md:pt-8 mb-4 lg:mb-32">
                 <Logo />
             </div>
             <section className="mx-auto max-w-xl">
@@ -22,7 +22,7 @@ export default function Home() {
                 <div className="text-center pb-6 pt-4 text-sm font-light leading-loose tracking-wide text-brandLight sm:text-base md:mb-6 md:mt-4 md:text-lg">
                     MAY 7, 2024
                 </div>
-                <div>
+                <div className="px-2 md:px-0">
                     <Card>
                         <CardHeader>
                             <Logos />

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import LogoWhite from '@/public/logos/logo-white.svg';
-import LogosImage from '@/public/logos/Ev Tech Day Logos.webp';
+import PartnerLogos from '@/public/logos/partner-logos.webp';
 
 export function Logo({ className }: any) {
     return (
@@ -28,7 +28,7 @@ export function Logo({ className }: any) {
 export function Logos({ className }: any) {
     return (
         <div>
-            <Image src={LogosImage} alt="Partner Logos" />
+            <Image src={PartnerLogos} alt="Partner Logos" />
         </div>
     );
 }

@@ -11,7 +11,7 @@ import {
 // Use this object to send drizzle queries to your DB
 export const db = drizzle(sql);
 // Create a pgTable that maps to a table in your DB
-export const SignupsTable = pgTable(
+export const Signups = pgTable(
     'signups',
     {
         id: serial('id').primaryKey(),
@@ -30,6 +30,6 @@ export const SignupsTable = pgTable(
 );
 
 export const getExampleTable = async () => {
-    const selectResult = await db.select().from(SignupsTable);
+    const selectResult = await db.select().from(Signups);
     console.log('Results', selectResult);
 };
