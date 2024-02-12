@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { RegisterForm } from '../components/register-form';
 import { Logo, Logos } from '@/components/ui/logos';
 import Banner from '@/components/ui/banner';
-import { getExampleTable } from '@/lib/db';
 
 export default function Home() {
     return (
