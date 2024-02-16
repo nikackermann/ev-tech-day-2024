@@ -40,7 +40,7 @@ export default function Home() {
                     <CountDown />
                 </div>
                 <div className="flex justify-center items-start min-h-[30vh] pt-8">
-                    <div className="flex flex-col sm:flex-row max-w-4xl w-full space-y-1 sm:space-y-0 gap-4 px-2">
+                    <div className="flex flex-col sm:flex-row max-w-5xl w-full space-y-1 sm:space-y-0 gap-4 px-2">
                         <div className="flex-grow w-full sm:w-1/2 order-2 sm:order-1">
                             <Card className="">
                                 <CardHeader className="text-lg font-bold -mb-3 uppercase">

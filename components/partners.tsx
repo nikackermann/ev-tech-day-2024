@@ -17,7 +17,7 @@ import Image from 'next/image';
 
 export default function Partners() {
     return (
-        <Accordion type="single" collapsible>
+        <Accordion type="single" collapsible className="backdrop-blur-none">
             <AccordionItem value="item-1">
                 <AccordionTrigger>WAFIOS Machinary Corp.</AccordionTrigger>
                 <AccordionContent id="item-1">
