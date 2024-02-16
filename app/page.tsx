@@ -40,8 +40,8 @@ export default function Home() {
                     <CountDown />
                 </div>
                 <div className="flex justify-center items-start min-h-[30vh] pt-8">
-                    <div className="flex flex-col sm:flex-row max-w-4xl w-full space-x-1 sm:space-x-1 space-y-1 sm:space-y-0">
-                        <div className="flex-grow w-full sm:w-1/2 p-4 order-2 sm:order-1">
+                    <div className="flex flex-col sm:flex-row max-w-4xl w-full space-y-1 sm:space-y-0 gap-4 px-2">
+                        <div className="flex-grow w-full sm:w-1/2 order-2 sm:order-1">
                             <Card className="">
                                 <CardHeader className="text-lg font-bold -mb-3 uppercase">
                                     <h1>
@@ -56,7 +56,7 @@ export default function Home() {
                                 </CardContent>
                             </Card>
                         </div>
-                        <div className="flex-grow p-4 md:px-0 w-full sm:w-1/2 order-1 sm:order-2">
+                        <div className="flex-grow md:px-0 w-full sm:w-1/2 order-1 sm:order-2">
                             <Card>
                                 <CardHeader>
                                     <Logos />
