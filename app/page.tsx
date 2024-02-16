@@ -46,7 +46,7 @@ export default function Home() {
                                 <CardHeader className="text-lg font-bold -mb-3 uppercase">
                                     <h1>
                                         Event
-                                        <mark className="ml-1 p-1 px-1.5 text-white bg-brand-500 rounded-xl dark:bg-blue-500">
+                                        <mark className="ml-1 p-1 px-1.5 text-white bg-brand-500 rounded-md dark:bg-blue-500">
                                             partners
                                         </mark>
                                     </h1>
