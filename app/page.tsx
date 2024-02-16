@@ -33,7 +33,7 @@ export default function Home() {
                         className="bg-[#E9EFFF] rounded-full px-5 py-2 text-sm text-brand-500"
                         variant="secondary"
                     >
-                        MARCH 7TH, 2024
+                        MAY 7TH, 2024
                     </Badge>
                 </div>
                 <div className="max-w-xl mx-auto mb-4">
