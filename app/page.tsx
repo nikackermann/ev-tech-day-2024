@@ -19,7 +19,7 @@ export default function Home() {
                 <Logo />
             </div>
             <section>
-                <div className="mx-auto max-w-xl">
+                <div className="mx-auto max-w-xl mb-6">
                     <div className="text-brandLight text-center text-xs font-light md:text-base lg:text-lg">
                         WAFIOS, with our partners invite you to the Second
                         Annual
