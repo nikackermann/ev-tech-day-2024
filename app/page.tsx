@@ -36,7 +36,7 @@ export default function Home() {
                         MARCH 7TH, 2024
                     </Badge>
                 </div>
-                <div className="max-w-xl mx-auto">
+                <div className="max-w-xl mx-auto mb-4">
                     <CountDown />
                 </div>
                 <div className="flex justify-center items-start min-h-[30vh] pt-8">
