@@ -21,7 +21,12 @@ export default function Partners() {
             <AccordionItem value="item-1">
                 <AccordionTrigger>WAFIOS Machinary Corp.</AccordionTrigger>
                 <AccordionContent id="item-1">
-                    <Image src={LogoBlue} alt="WAFIOS Logo" className="mb-4" />
+                    <Image
+                        src={LogoBlue}
+                        alt="WAFIOS Logo"
+                        className="mb-4"
+                        priority
+                    />
                     {`WAFIOS was established in 1893 and is today the world's
                     largest supplier of precision machinery for wire, tube and
                     formed parts. Headquartered in Reutlingen, Germanty, the
@@ -41,6 +46,7 @@ export default function Partners() {
                         className="mb-4"
                         width={112}
                         height={60}
+                        priority
                     />
                     Witels Albert specializes in wire straighteners, tube
                     straighteners, wire and tube feeders and drive units, guides
@@ -60,6 +66,7 @@ export default function Partners() {
                         className="mb-4"
                         width={72}
                         height={60}
+                        priority
                     />
                     ZEISS Industrial Quality Solutions is a leading manufacturer
                     of multidimensional metrology solutions. These include
@@ -82,6 +89,7 @@ export default function Partners() {
                         className="mb-4"
                         width={140}
                         height={60}
+                        priority
                     />
                     A leading manufacturer of magnet wires for e-mobility and is
                     thus one of the key companies in a rapidly growing market.
@@ -104,6 +112,7 @@ export default function Partners() {
                         className="mb-4"
                         width={120}
                         height={60}
+                        priority
                     />
                     A leading manufacturer of magnet wires for e-mobility and is
                     thus one of the key companies in a rapidly growing market.
@@ -126,6 +135,7 @@ export default function Partners() {
                         className="mb-4"
                         width={120}
                         height={60}
+                        priority
                     />
                     Balance Systems srl is the world market leader in balancing
                     technology, specializing in the construction of automatic
@@ -142,6 +152,7 @@ export default function Partners() {
                         className="mb-4"
                         width={120}
                         height={60}
+                        priority
                     />
                     Schuler North America (Schuler), headquartered in Canton,
                     Michigan, is the North American subsidiary of Schuler Group.
