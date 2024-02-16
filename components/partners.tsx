@@ -27,7 +27,9 @@ export default function Partners() {
                         className="mb-4"
                         priority
                     />
-                    {`WAFIOS was established in 1893 and is today the world's
+
+                    <p className="mb-2">
+                        {`WAFIOS was established in 1893 and is today the world's
                     largest supplier of precision machinery for wire, tube and
                     formed parts. Headquartered in Reutlingen, Germanty, the
                     WAFIOS range of machine types include spring coiling and
@@ -35,6 +37,18 @@ export default function Partners() {
                     tube bending and forming, wire straightening, cutting and
                     end-working, as well as precision machines used to produce
                     fasteners and chains.`}
+                    </p>
+                    <p>
+                        The WAFIOS North American headquarters is in Branford,
+                        Connecticut, with spare parts stock, service resources
+                        and machines available for demonstration. The
+                        Chicago-area Midwest Technical Center located in Mokena,
+                        Illinois provides additional resources as a service
+                        center, with machines available for trials and
+                        demonstration. Both facilities are structured to support
+                        application development, as well as provide customers
+                        with hands-on training programs.
+                    </p>
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
