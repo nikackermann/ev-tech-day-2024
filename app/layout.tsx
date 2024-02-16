@@ -22,7 +22,7 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={cn(
-                    'min-h-screen bg-brand font-sans antialiased',
+                    'bg-brand min-h-screen overflow-y-scroll font-sans antialiased',
                     fontSans.variable
                 )}
             >

@@ -33,4 +33,5 @@ export const signups = pgTable(
     }
 );
 
+// infer type from Drizzle pgTable
 export type Signup = typeof signups.$inferSelect;

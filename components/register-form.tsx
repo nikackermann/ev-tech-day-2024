@@ -109,7 +109,7 @@ export function RegisterForm() {
                     <Button
                         disabled={status === 'executing'}
                         type="submit"
-                        className="w-full bg-brand text-white transition-colors duration-200 hover:bg-brand/90 hover:text-white rounded-full"
+                        className="bg-brand-500 hover:bg-brand-500/90 w-full rounded-full text-white transition-colors duration-200 hover:text-white"
                     >
                         {status === 'executing' && (
                             <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
