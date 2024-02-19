@@ -35,7 +35,7 @@ export default function Home() {
                 </div>
                 <div className="mb-14 flex min-h-[30vh] items-stretch justify-center">
                     <div className="flex w-full max-w-5xl flex-col gap-4 lg:gap-8 space-y-1 px-2 sm:flex-row sm:space-y-0">
-                        <div className="hidden md:block order-2 w-full flex-grow sm:order-1 sm:w-1/2 flex-col">
+                        <div className="order-2 w-full flex-grow sm:order-1 sm:w-1/2 flex-col">
                             <Card className="flex flex-col">
                                 <CardHeader className="-mb-3 text-lg font-bold uppercase px-7">
                                     <h1>
