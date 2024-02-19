@@ -8,8 +8,8 @@ import Partners from '@/components/partners';
 
 export default function Home() {
     return (
-        <main className="bg-[url('/bg-gradient.svg')] bg-fixed bg-cover bg-no-repeat ">
-            <div className="lg:mb-22 mb-4 sm:mb-12 md:p-5 md:pl-10 md:pt-8 mt-6">
+        <main className="bg-[url('/bg-gradient.svg')] bg-fixed bg-cover bg-no-repeat min-h-screen py-2">
+            <div className="lg:mb-22 mb-4 sm:mb-12 md:p-5 md:pl-10 md:pt-8">
                 <Logo />
             </div>
             <section>
@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="mx-auto max-w-xl mb-6 lg:mb-0">
                     <CountDown />
                 </div>
-                <div className="mb-14 flex min-h-[30vh] items-stretch justify-center">
+                <div className="mb-14 flex items-stretch justify-center">
                     <div className="flex w-full max-w-5xl flex-col gap-4 lg:gap-8 space-y-1 px-2 sm:flex-row sm:space-y-0">
                         <div className="order-2 w-full flex-grow sm:order-1 sm:w-1/2 flex-col hidden md:block">
                             <Card className="flex flex-col">
