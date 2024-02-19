@@ -1,52 +1,46 @@
-import Banner from '@/components/ui/banner';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import CountDown from '@/components/ui/countdown';
-import { Logo, Logos } from '@/components/ui/logos';
-import { RegisterForm } from '../components/register-form';
-import { Badge } from '@/components/ui/badge';
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from '@/components/ui/accordion';
-import Partners from '@/components/partners';
+import Banner from "@/components/ui/banner";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import CountDown from "@/components/ui/countdown";
+import { Logo, Logos } from "@/components/ui/logos";
+import { RegisterForm } from "../components/register-form";
+import { Badge } from "@/components/ui/badge";
+import Partners from "@/components/partners";
 
 export default function Home() {
     return (
-        <main className="relative min-h-screen bg-[url('/bg-gradient.svg')] bg-cover bg-fixed bg-center bg-no-repeat">
+        <main className="h-full min-h-screen">
             <div className="lg:mb-22 mb-4 sm:mb-12 md:p-5 md:pl-10 md:pt-8">
                 <Logo />
             </div>
             <section>
-                <div className="mx-auto max-w-xl mb-6">
+                <div className="mx-auto mb-6 max-w-xl">
                     <div className="text-brandLight text-center text-xs font-light md:text-base lg:text-lg">
                         WAFIOS, with our partners invite you to the Second
                         Annual
                     </div>
-                    <div className="flex items-center justify-center mb-4">
+                    <div className="mb-4 flex items-center justify-center">
                         <Banner />
                     </div>
                 </div>
-                <div className="text-brandLight mx-auto pb-6 text-center text-sm font-light leading-loose tracking-wide sm:text-base md:mb-4 md:mt-4 md:text-lg max-w-xl">
+                <div className="text-brandLight mx-auto max-w-xl pb-6 text-center text-sm font-light leading-loose tracking-wide sm:text-base md:mb-4 md:mt-4 md:text-lg">
                     <Badge
-                        className="bg-[#E9EFFF] rounded-full px-5 py-2 text-sm text-brand-500"
+                        className="text-brand-500 rounded-full bg-[#E9EFFF] px-5 py-2 text-sm"
                         variant="secondary"
                     >
                         MAY 7TH, 2024
                     </Badge>
                 </div>
-                <div className="max-w-xl mx-auto mb-4">
+                <div className="mx-auto mb-4 max-w-xl">
                     <CountDown />
                 </div>
-                <div className="flex justify-center items-start min-h-[30vh] pt-8">
-                    <div className="flex flex-col sm:flex-row max-w-5xl w-full space-y-1 sm:space-y-0 gap-4 px-2">
-                        <div className="flex-grow w-full sm:w-1/2 order-2 sm:order-1">
+                <div className="mb-14 flex min-h-[30vh] items-start justify-center pt-8">
+                    <div className="flex w-full max-w-5xl flex-col gap-4 space-y-1 px-2 sm:flex-row sm:space-y-0">
+                        <div className="order-2 w-full flex-grow sm:order-1 sm:w-1/2">
                             <Card className="">
-                                <CardHeader className="text-lg font-bold -mb-3 uppercase">
+                                <CardHeader className="-mb-3 text-lg font-bold uppercase">
                                     <h1>
                                         Event
-                                        <mark className="ml-1 p-1 px-1.5 text-white bg-brand-500 rounded-md dark:bg-blue-500">
+                                        <mark className="bg-brand-500 ml-1 rounded-md p-1 px-1.5 text-white dark:bg-blue-500">
                                             partners
                                         </mark>
                                     </h1>
@@ -56,7 +50,7 @@ export default function Home() {
                                 </CardContent>
                             </Card>
                         </div>
-                        <div className="flex-grow md:px-0 w-full sm:w-1/2 order-1 sm:order-2">
+                        <div className="order-1 w-full flex-grow sm:order-2 sm:w-1/2 md:px-0">
                             <Card>
                                 <CardHeader>
                                     <Logos />
