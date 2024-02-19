@@ -100,14 +100,14 @@ const partners = [
 
 export default function Partners() {
     return (
-        <div className="flex flex-col h-full justify-between mt-1 mb-5 space-y-4">
+        <div className="flex flex-col h-full justify-between mt-3 mb-3 space-y-4">
             {partners.map((company) => (
                 <div
                     key={company.name}
                     className="mx-auto w-full rounded-full bg-white"
                 >
                     <Disclosure>
-                        <Disclosure.Button className="flex w-full justify-between rounded-lg  px-2 py-2 text-left text-sm font-medium text-gray-900 hover:bg-[#E9EFFF]/70 focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75">
+                        <Disclosure.Button className="flex w-full justify-between rounded-lg  px-2 py-2 text-left text-sm font-medium text-gray-900">
                             <span>{company.name}</span>
                             <ChevronRightIcon className="ui-open:rotate-90 ui-open:transform" />
                         </Disclosure.Button>
