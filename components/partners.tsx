@@ -128,16 +128,13 @@ export default function Partners() {
                         height={60}
                         priority
                     />
-                    A leading manufacturer of magnet wires for e-mobility and is
-                    thus one of the key companies in a rapidly growing market.
-                    As a specialist for PEEK and PAI-enamel insulated copper
-                    flat wires, HPW is mass producing and supplying to numerous
-                    renowned European OEMs and Tier 1 manufacturers for several
-                    years. Approximately 20,000 metric tons are currently being
-                    produced in three Austrian production sites. HPW North
-                    America is currently being installed with initial operation
-                    in 2025, mass-producing PEEK insulated magnet wires for
-                    large North American OEMs.
+                    The worldwide market leader in magnetic testing technology,
+                    specializing in the characterization of magnets, electrical
+                    steel, and stators. We serve automotive customers around the
+                    globe as a trusted and reliable partner. Our mission is to
+                    reduce power loss, heat generation, and, in collaboration
+                    with the motor industry, improve the efficiency and range of
+                    electric vehicles.
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6">
