@@ -100,7 +100,7 @@ const partners = [
 
 export default function Partners() {
     return (
-        <div className="flex flex-col h-full justify-between">
+        <div className="flex flex-col h-full justify-between mt-1 mb-5 space-y-4">
             {partners.map((company) => (
                 <div
                     key={company.name}
