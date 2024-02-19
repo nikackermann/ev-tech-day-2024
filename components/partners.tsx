@@ -107,29 +107,21 @@ export default function Partners() {
                     className="mx-auto w-full rounded-full bg-white"
                 >
                     <Disclosure>
-                        {({ open }) => (
-                            <>
-                                <Disclosure.Button className="flex w-full justify-between rounded-lg  px-2 py-2 text-left text-sm font-medium text-gray-900 hover:bg-[#E9EFFF]/70 focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75">
-                                    <span>{company.name}</span>
-                                    <ChevronUpIcon
-                                        className={`${
-                                            open ? 'rotate-180 transform' : ''
-                                        } h-5 w-5 text-brand-500`}
-                                    />
-                                </Disclosure.Button>
-                                <Disclosure.Panel className="px-2 pb-2 pt-4 text-sm text-gray-500">
-                                    <Image
-                                        src={company.logo}
-                                        alt={`${company.name} logo`}
-                                        className="mb-4"
-                                        priority
-                                        width={company.width}
-                                        height={company.height}
-                                    />
-                                    <p>{company.description}</p>
-                                </Disclosure.Panel>
-                            </>
-                        )}
+                        <Disclosure.Button className="flex w-full justify-between rounded-lg  px-2 py-2 text-left text-sm font-medium text-gray-900 hover:bg-[#E9EFFF]/70 focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75">
+                            <span>{company.name}</span>
+                            <ChevronRightIcon className="ui-open:rotate-90 ui-open:transform" />
+                        </Disclosure.Button>
+                        <Disclosure.Panel className="px-2 pb-2 pt-4 text-sm text-gray-500">
+                            <Image
+                                src={company.logo}
+                                alt={`${company.name} logo`}
+                                className="mb-4"
+                                priority
+                                width={company.width}
+                                height={company.height}
+                            />
+                            <p>{company.description}</p>
+                        </Disclosure.Panel>
                     </Disclosure>
                 </div>
             ))}
