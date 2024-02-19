@@ -60,7 +60,11 @@ export function RegisterForm() {
                         <FormItem>
                             <FormLabel>Name</FormLabel>
                             <FormControl>
-                                <Input placeholder="Name" {...field} />
+                                <Input
+                                    placeholder="Name"
+                                    className="text-md"
+                                    {...field}
+                                />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -73,7 +77,11 @@ export function RegisterForm() {
                         <FormItem>
                             <FormLabel>Company</FormLabel>
                             <FormControl>
-                                <Input placeholder="Company" {...field} />
+                                <Input
+                                    placeholder="Company"
+                                    className="text-md"
+                                    {...field}
+                                />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -86,7 +94,11 @@ export function RegisterForm() {
                         <FormItem>
                             <FormLabel>Title</FormLabel>
                             <FormControl>
-                                <Input placeholder="Title" {...field} />
+                                <Input
+                                    placeholder="Title"
+                                    className="text-md"
+                                    {...field}
+                                />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -99,7 +111,11 @@ export function RegisterForm() {
                         <FormItem>
                             <FormLabel>Email</FormLabel>
                             <FormControl>
-                                <Input placeholder="Email" {...field} />
+                                <Input
+                                    placeholder="Email"
+                                    className="text-md"
+                                    {...field}
+                                />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
