@@ -19,13 +19,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body
-                className={cn(
-                    "bg-[url('/bg-gradient.svg')] bg-fixed bg-cover bg-no-repeat font-sans antialiased",
-                    fontSans.variable
-                )}
-            >
+        <html
+            lang="en"
+            className="bg-[url('/bg-gradient.svg')] bg-fixed bg-cover bg-no-repeat "
+        >
+            <body className={cn('font-sans antialiased', fontSans.variable)}>
                 {children}
             </body>
         </html>

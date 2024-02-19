@@ -8,7 +8,7 @@ import Partners from '@/components/partners';
 
 export default function Home() {
     return (
-        <main>
+        <main className="bg-[url('/bg-gradient.svg')] bg-fixed bg-cover bg-no-repeat ">
             <div className="lg:mb-22 mb-4 sm:mb-12 md:p-5 md:pl-10 md:pt-8 mt-6">
                 <Logo />
             </div>

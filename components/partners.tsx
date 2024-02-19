@@ -102,10 +102,7 @@ export default function Partners() {
     return (
         <div className="flex flex-col h-full justify-between mt-3 mb-3 space-y-4">
             {partners.map((company) => (
-                <div
-                    key={company.name}
-                    className="mx-auto w-full rounded-full bg-white"
-                >
+                <div key={company.name} className="mx-auto w-full rounded-full">
                     <Disclosure>
                         <Disclosure.Button className="flex w-full justify-between rounded-lg  px-2 py-2 text-left text-sm font-medium text-gray-900">
                             <span>{company.name}</span>
