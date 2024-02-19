@@ -9,7 +9,7 @@ import Partners from '@/components/partners';
 export default function Home() {
     return (
         <main>
-            <div className="lg:mb-22 mb-4 sm:mb-12 md:p-5 md:pl-10 md:pt-8">
+            <div className="lg:mb-22 mb-4 sm:mb-12 md:p-5 md:pl-10 md:pt-8 mt-6">
                 <Logo />
             </div>
             <section>
@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="mx-auto mb-4 max-w-xl">
                     <CountDown />
                 </div>
-                <div className="mb-14 flex min-h-[30vh] items-start justify-center pt-8">
+                <div className="mb-14 flex min-h-[30vh] items-start justify-center">
                     <div className="flex w-full max-w-5xl flex-col gap-4 space-y-1 px-2 sm:flex-row sm:space-y-0">
                         <div className="order-2 w-full flex-grow sm:order-1 sm:w-1/2">
                             <Card className="">

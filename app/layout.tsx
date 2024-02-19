@@ -22,7 +22,7 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={cn(
-                    "bg-[url('/bg-gradient.svg')] overflow-y-scroll bg-fixed bg-cover bg-no-repeat font-sans antialiased",
+                    "bg-[url('/bg-gradient.svg')] bg-fixed bg-cover bg-no-repeat font-sans antialiased",
                     fontSans.variable
                 )}
             >
