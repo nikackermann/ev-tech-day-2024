@@ -24,13 +24,13 @@ export default function Home() {
                 </div>
                 <div className="text-brandLight mx-auto max-w-xl pb-6 text-center text-sm font-light leading-loose tracking-wide sm:text-base md:mb-4 md:mt-4 md:text-lg">
                     <Badge
-                        className="text-brand-500 rounded-full bg-[#E9EFFF] px-5 py-2 text-sm"
+                        className="text-brand-500 rounded-full bg-[#E9EFFF] px-5 py-2 mb-2 text-sm"
                         variant="secondary"
                     >
                         MAY 7TH, 2024
                     </Badge>
                 </div>
-                <div className="mx-auto mb-4 max-w-xl hidden md:block">
+                <div className="mx-auto max-w-xl mb-6 lg:mb-0">
                     <CountDown />
                 </div>
                 <div className="mb-14 flex min-h-[30vh] items-stretch justify-center">
