@@ -52,7 +52,7 @@ export default function Partners() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-                <AccordionTrigger>Witels Alebrt USA</AccordionTrigger>
+                <AccordionTrigger>Witels-Albert USA</AccordionTrigger>
                 <AccordionContent>
                     <Image
                         src={WitelsLogo}

@@ -1,14 +1,14 @@
-import Banner from "@/components/ui/banner";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import CountDown from "@/components/ui/countdown";
-import { Logo, Logos } from "@/components/ui/logos";
-import { RegisterForm } from "../components/register-form";
-import { Badge } from "@/components/ui/badge";
-import Partners from "@/components/partners";
+import Banner from '@/components/ui/banner';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import CountDown from '@/components/ui/countdown';
+import { Logo, Logos } from '@/components/ui/logos';
+import { RegisterForm } from '../components/register-form';
+import { Badge } from '@/components/ui/badge';
+import Partners from '@/components/partners';
 
 export default function Home() {
     return (
-        <main className="h-full min-h-screen">
+        <main>
             <div className="lg:mb-22 mb-4 sm:mb-12 md:p-5 md:pl-10 md:pt-8">
                 <Logo />
             </div>

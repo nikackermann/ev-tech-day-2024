@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import { cn } from "@/lib/utils";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter as FontSans } from 'next/font/google';
+import { cn } from '@/lib/utils';
+import './globals.css';
 
 const fontSans = FontSans({
-    subsets: ["latin"],
-    variable: "--font-sans",
+    subsets: ['latin'],
+    variable: '--font-sans',
 });
 
 export const metadata: Metadata = {
-    title: "EV Tech Day 2024 | Wafios",
-    description: "EV Tech Day 2024 - Presented by Wafios",
+    title: 'EV Tech Day 2024 | Wafios',
+    description: 'EV Tech Day 2024 - Presented by Wafios',
 };
 
 export default function RootLayout({
@@ -22,8 +22,8 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={cn(
-                    "h-full min-h-screen bg-black bg-[url('/bg-gradient.svg')] bg-cover bg-local font-sans antialiased",
-                    fontSans.variable,
+                    "bg-[url('/bg-gradient.svg')] bg-fixed bg-cover bg-no-repeat font-sans antialiased",
+                    fontSans.variable
                 )}
             >
                 {children}
