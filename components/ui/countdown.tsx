@@ -1,3 +1,4 @@
+'use client';
 import CountdownTimer from './timer';
 
 export default function CountDown() {

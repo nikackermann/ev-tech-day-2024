@@ -12,7 +12,10 @@ export function Timer() {
     return (
         <div className="flex justify-center space-x-1 sm:space-x-2">
             <div className="flex-1 flex flex-col items-center justify-center sm:p-4 backdrop-blur-sm">
-                <span className="text-2xl sm:text-4xl font-bold text-white">
+                <span
+                    className="text-2xl sm:text-4xl font-bold text-white"
+                    suppressHydrationWarning
+                >
                     {days}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-white uppercase">
@@ -20,7 +23,10 @@ export function Timer() {
                 </span>
             </div>
             <div className="flex-1 flex flex-col items-center justify-center sm:p-4 backdrop-blur-sm">
-                <span className="text-2xl sm:text-4xl font-bold text-white">
+                <span
+                    className="text-2xl sm:text-4xl font-bold text-white"
+                    suppressHydrationWarning
+                >
                     {hours}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-white uppercase">
@@ -28,7 +34,10 @@ export function Timer() {
                 </span>
             </div>
             <div className="flex-1 flex flex-col items-center justify-center sm:p-4 backdrop-blur-sm">
-                <span className="text-2xl sm:text-4xl font-bold text-white">
+                <span
+                    className="text-2xl sm:text-4xl font-bold text-white"
+                    suppressHydrationWarning
+                >
                     {minutes}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-white uppercase">
@@ -36,7 +45,10 @@ export function Timer() {
                 </span>
             </div>
             <div className="flex-1 flex flex-col items-center justify-center sm:p-4 backdrop-blur-sm">
-                <span className="text-2xl sm:text-4xl font-bold text-white">
+                <span
+                    className="text-2xl sm:text-4xl font-bold text-white"
+                    suppressHydrationWarning
+                >
                     {seconds}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-white uppercase">

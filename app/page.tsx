@@ -33,11 +33,11 @@ export default function Home() {
                 <div className="mx-auto mb-4 max-w-xl">
                     <CountDown />
                 </div>
-                <div className="mb-14 flex min-h-[30vh] items-start justify-center">
-                    <div className="flex w-full max-w-5xl flex-col gap-4 space-y-1 px-2 sm:flex-row sm:space-y-0">
-                        <div className="order-2 w-full flex-grow sm:order-1 sm:w-1/2">
-                            <Card className="">
-                                <CardHeader className="-mb-3 text-lg font-bold uppercase">
+                <div className="mb-14 flex min-h-[30vh] items-stretch justify-center">
+                    <div className="flex w-full max-w-5xl flex-col gap-4 lg:gap-8 space-y-1 px-2 sm:flex-row sm:space-y-0">
+                        <div className="order-2 w-full flex-grow sm:order-1 sm:w-1/2 flex flex-col">
+                            <Card className="flex flex-col h-full">
+                                <CardHeader className="-mb-3 text-lg font-bold uppercase px-7">
                                     <h1>
                                         Event
                                         <mark className="bg-brand-500 ml-1 rounded-md p-1 px-1.5 text-white dark:bg-blue-500">
@@ -45,17 +45,17 @@ export default function Home() {
                                         </mark>
                                     </h1>
                                 </CardHeader>
-                                <CardContent>
+                                <CardContent className="flex-grow">
                                     <Partners />
                                 </CardContent>
                             </Card>
                         </div>
-                        <div className="order-1 w-full flex-grow sm:order-2 sm:w-1/2 md:px-0">
-                            <Card>
+                        <div className="order-1 w-full flex-grow sm:order-2 sm:w-1/2 md:px-0 flex flex-col">
+                            <Card className="flex flex-col">
                                 <CardHeader>
                                     <Logos />
                                 </CardHeader>
-                                <CardContent>
+                                <CardContent className="flex-grow">
                                     {/* <EventInfo /> */}
                                     <RegisterForm />
                                 </CardContent>
