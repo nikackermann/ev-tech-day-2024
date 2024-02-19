@@ -117,29 +117,17 @@ export default function Partners() {
                                         } h-5 w-5 text-brand-500`}
                                     />
                                 </Disclosure.Button>
-                                <Transition
-                                    enter="transition duration-100 ease-out"
-                                    enterFrom="transform scale-95 opacity-0"
-                                    enterTo="transform scale-100 opacity-100"
-                                    leave="transition duration-75 ease-out"
-                                    leaveFrom="transform scale-100 opacity-100"
-                                    leaveTo="transform scale-95 opacity-0"
-                                >
-                                    <Disclosure.Panel
-                                        static
-                                        className="px-2 pb-2 pt-4 text-sm text-gray-500"
-                                    >
-                                        <Image
-                                            src={company.logo}
-                                            alt={`${company.name} logo`}
-                                            className="mb-4"
-                                            priority
-                                            width={company.width}
-                                            height={company.height}
-                                        />
-                                        <p>{company.description}</p>
-                                    </Disclosure.Panel>
-                                </Transition>
+                                <Disclosure.Panel className="px-2 pb-2 pt-4 text-sm text-gray-500">
+                                    <Image
+                                        src={company.logo}
+                                        alt={`${company.name} logo`}
+                                        className="mb-4"
+                                        priority
+                                        width={company.width}
+                                        height={company.height}
+                                    />
+                                    <p>{company.description}</p>
+                                </Disclosure.Panel>
                             </>
                         )}
                     </Disclosure>
