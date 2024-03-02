@@ -41,7 +41,7 @@ export function Timer() {
                     {minutes}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-white uppercase">
-                    Minutes
+                    Mins
                 </span>
             </div>
             <div className="flex-1 flex flex-col items-center justify-center sm:p-4 backdrop-blur-sm">
@@ -52,7 +52,7 @@ export function Timer() {
                     {seconds}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-white uppercase">
-                    Seconds
+                    Secs
                 </span>
             </div>
         </div>

@@ -1,15 +1,16 @@
-'use client';
+'use client'
 
-import LogoBlue from '@/public/logos/logo-blue.svg';
-import WitelsLogo from '@/public/logos/witels-logo.png';
-import ZeissLogo from '@/public/logos/zeiss-logo.png';
-import HpwLogo from '@/public/logos/hpw-logo.png';
-import BMLogo from '@/public/logos/bm-logo.png';
-import BSLogo from '@/public/logos/bs-logo.jpg';
-import SchulerLogo from '@/public/logos/schuler-logo.png';
-import Image from 'next/image';
-import { Disclosure, Transition } from '@headlessui/react';
-import { ChevronRightIcon, ChevronUpIcon } from '@radix-ui/react-icons';
+import LogoBlue from '@/public/logos/logo-blue.svg'
+import WitelsLogo from '@/public/logos/witels-logo.png'
+import ZeissLogo from '@/public/logos/zeiss-logo.png'
+import HpwLogo from '@/public/logos/hpw-logo.png'
+import BMLogo from '@/public/logos/bm-logo.png'
+import BSLogo from '@/public/logos/bs-logo.jpg'
+import SchulerLogo from '@/public/logos/schuler-logo.png'
+import TrumpfLogo from '@/public/logos/trumpf-logo.png'
+import Image from 'next/image'
+import { Disclosure, Transition } from '@headlessui/react'
+import { ChevronRightIcon, ChevronUpIcon } from '@radix-ui/react-icons'
 
 const partners = [
     {
@@ -26,7 +27,7 @@ const partners = [
                     end-working, as well as precision machines used to produce
                     fasteners and chains.
                     The WAFIOS North American headquarters is in Branford, Connecticut, with spare parts stock, service resources and machines available for demonstration. The Chicago-area Midwest Technical Center located in Mokena, Illinois provides additional resources as a service center, with machines available for trials and demonstration. Both facilities are structured to support application development, as well as provide customers with hands-on training programs. 
-                    `,
+                    `
     },
     {
         name: 'Witels-Albert USA',
@@ -39,7 +40,7 @@ const partners = [
                     wire rope and profile shape. Our products are engineered and
                     produced in the German tradition of innovation, precision
                     and quality by Witels Albert Germany, and stocking here in
-                    the US.`,
+                    the US.`
     },
     {
         name: 'Zeiss',
@@ -53,21 +54,21 @@ const partners = [
         industrial quality assurance as well as metrology software.
         The company is headquartered in Oberkochen, Germany with
         production and development sites located in Minneapolis,
-        Shanghai and Bangalore.`,
+        Shanghai and Bangalore.`
     },
     {
         name: 'HPW (High Performance Wires)',
         logo: HpwLogo,
         width: 130,
         height: 40,
-        description: `A leading manufacturer of magnet wires for e-mobility and is thus one of the key companies in a rapidly growing market. As a specialist for PEEK and PAI-enamel insulated copper flat wires, HPW is mass producing and supplying to numerous renowned European OEMs and Tier 1 manufacturers for several years. Approximately 20,000 metric tons are currently being produced in three Austrian production sites. HPW North America is currently being installed with initial operation in 2025, mass-producing PEEK insulated magnet wires for large North American OEMs.`,
+        description: `A leading manufacturer of magnet wires for e-mobility and is thus one of the key companies in a rapidly growing market. As a specialist for PEEK and PAI-enamel insulated copper flat wires, HPW is mass producing and supplying to numerous renowned European OEMs and Tier 1 manufacturers for several years. Approximately 20,000 metric tons are currently being produced in three Austrian production sites. HPW North America is currently being installed with initial operation in 2025, mass-producing PEEK insulated magnet wires for large North American OEMs.`
     },
     {
         name: 'BROCKHAUS MEASUREMENTS',
         logo: BMLogo,
         width: 120,
         height: 40,
-        description: `The worldwide market leader in magnetic testing technology, specializing in the characterization of magnets, electrical steel, and stators. We serve automotive customers around the globe as a trusted and reliable partner. Our mission is to reduce power loss, heat generation, and, in collaboration with the motor industry, improve the efficiency and range of electric vehicles.`,
+        description: `The worldwide market leader in magnetic testing technology, specializing in the characterization of magnets, electrical steel, and stators. We serve automotive customers around the globe as a trusted and reliable partner. Our mission is to reduce power loss, heat generation, and, in collaboration with the motor industry, improve the efficiency and range of electric vehicles.`
     },
     {
         name: 'Balance Systems',
@@ -77,7 +78,7 @@ const partners = [
         description: `Balance Systems srl is the world market leader in balancing
         technology, specializing in the construction of automatic
         machines for large volume production runs for balancing
-        electric motors.`,
+        electric motors.`
     },
     {
         name: 'Schuler North America',
@@ -94,13 +95,20 @@ const partners = [
         best-in-class position in the metalworking and materials
         industry serves automotive manufacturers and tier suppliers,
         as well as home appliance, electronics, forging, and other
-        industries.`,
+        industries.`
     },
-];
+    {
+        name: 'TRUMPF',
+        logo: TrumpfLogo,
+        width: 60,
+        height: 40,
+        description: `TRUMPF is a technology and market leader in highly versatile machine tools for sheet metal processing and in the field of industrial lasers. The high-tech company offers manufacturing solutions and drives digital connectivity in manufacturing through consulting, platform products and software.`
+    }
+]
 
 export default function Partners() {
     return (
-        <div className="flex flex-col h-full justify-between mt-3 mb-3 space-y-4">
+        <div className="mb-3 mt-3 flex h-full flex-col justify-between space-y-4">
             {partners.map((company) => (
                 <div key={company.name} className="mx-auto w-full rounded-full">
                     <Disclosure>
@@ -109,19 +117,19 @@ export default function Partners() {
                             <ChevronRightIcon className="ui-open:rotate-90 ui-open:transform" />
                         </Disclosure.Button>
                         <Disclosure.Panel className="px-2 pb-2 pt-4 text-sm text-gray-500">
+                            <p>{company.description}</p>
                             <Image
                                 src={company.logo}
                                 alt={`${company.name} logo`}
-                                className="mb-4"
+                                className="mt-2"
                                 priority
                                 width={company.width}
                                 height={company.height}
                             />
-                            <p>{company.description}</p>
                         </Disclosure.Panel>
                     </Disclosure>
                 </div>
             ))}
         </div>
-    );
+    )
 }
