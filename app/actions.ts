@@ -1,20 +1,20 @@
-'use server';
+'use server'
 
-import { db } from '@/lib/db';
-import { formSchema } from '@/lib/schema';
-import { signups, Signup } from '@/lib/schema';
-import { revalidatePath } from 'next/cache';
-import { createSafeActionClient } from 'next-safe-action';
-import { Resend } from 'resend';
-import EmailTemplate from '@/emails';
+import { db } from '@/lib/db'
+import { formSchema } from '@/lib/schema'
+import { signups, Signup } from '@/lib/schema'
+import { revalidatePath } from 'next/cache'
+import { createSafeActionClient } from 'next-safe-action'
+import { Resend } from 'resend'
+import EmailTemplate from '@/emails'
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY)
 
-export const action = createSafeActionClient();
+export const action = createSafeActionClient()
 
 export const createSafeSignup = action(
     formSchema,
-    async ({ name, company, title, email }) => {
+    async ({ name, company, title, email, phone }) => {
         const newSignup = await db
             .insert(signups)
             .values({
@@ -22,14 +22,15 @@ export const createSafeSignup = action(
                 company,
                 title,
                 email,
+                phone,
                 createdAt: new Date(),
-                event: 'ev-tech-day',
+                event: 'ev-tech-day'
             })
-            .returning();
+            .returning()
 
-        revalidatePath('/');
+        revalidatePath('/')
 
-        if (!newSignup) return { error: 'Could not create new signup' };
+        if (!newSignup) return { error: 'Could not create new signup' }
 
         if (newSignup[0].id) {
             resend.emails.send({
@@ -37,17 +38,17 @@ export const createSafeSignup = action(
                 to: email,
                 subject: 'Welcome to EV Tech Day 2024 - Presented by WAFIOS',
                 react: EmailTemplate({
-                    name,
-                }) as React.ReactElement,
-            });
+                    name
+                }) as React.ReactElement
+            })
 
-            return { success: newSignup[0] };
+            return { success: newSignup[0] }
         }
     }
-);
+)
 
 export const fetchSignups = async () => {
-    const data: Signup[] = await db.select().from(signups);
-    revalidatePath('/signups');
-    return data;
-};
+    const data: Signup[] = await db.select().from(signups)
+    revalidatePath('/signups')
+    return data
+}

@@ -5,13 +5,13 @@ import {
     TableCell,
     TableBody,
     Table,
-    TableFooter,
-} from '@/components/ui/table';
-import { Signup } from '@/lib/schema';
+    TableFooter
+} from '@/components/ui/table'
+import { Signup } from '@/lib/schema'
 
 type SignupsTableProps = {
-    signups: Signup[];
-};
+    signups: Signup[]
+}
 
 export function SignupsTable({ signups }: SignupsTableProps) {
     return (
@@ -23,6 +23,7 @@ export function SignupsTable({ signups }: SignupsTableProps) {
                     <TableHead>Company</TableHead>
                     <TableHead>Title</TableHead>
                     <TableHead>Email</TableHead>
+                    <TableHead>Phone</TableHead>
                     <TableHead>Created At</TableHead>
                     <TableHead>Event</TableHead>
                 </TableRow>
@@ -35,6 +36,7 @@ export function SignupsTable({ signups }: SignupsTableProps) {
                         <TableCell>{item.company}</TableCell>
                         <TableCell>{item.title}</TableCell>
                         <TableCell>{item.email}</TableCell>
+                        <TableCell>{item.phone}</TableCell>
                         <TableCell>
                             {new Date(item.createdAt).toLocaleDateString()}
                         </TableCell>
@@ -44,9 +46,9 @@ export function SignupsTable({ signups }: SignupsTableProps) {
             </TableBody>
             <TableFooter>
                 <TableRow>
-                    <TableCell colSpan={7}>{signups.length}</TableCell>
+                    <TableCell colSpan={8}>{signups.length}</TableCell>
                 </TableRow>
             </TableFooter>
         </Table>
-    );
+    )
 }

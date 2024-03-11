@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { useForm } from 'react-hook-form';
-import { formSchema } from '@/lib/schema';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { ReloadIcon } from '@radix-ui/react-icons';
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { useForm } from 'react-hook-form'
+import { formSchema } from '@/lib/schema'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { ReloadIcon } from '@radix-ui/react-icons'
 import {
     Form,
     FormControl,
@@ -14,11 +14,11 @@ import {
     FormField,
     FormItem,
     FormLabel,
-    FormMessage,
-} from '@/components/ui/form';
-import { createSafeSignup } from '@/app/actions';
-import { useAction } from 'next-safe-action/hooks';
-import Success from './ui/success';
+    FormMessage
+} from '@/components/ui/form'
+import { createSafeSignup } from '@/app/actions'
+import { useAction } from 'next-safe-action/hooks'
+import Success from './ui/success'
 
 export function RegisterForm() {
     const form = useForm<z.infer<typeof formSchema>>({
@@ -28,26 +28,27 @@ export function RegisterForm() {
             company: '',
             title: '',
             email: '',
-        },
-    });
+            phone: ''
+        }
+    })
 
     const { execute, status, result } = useAction(createSafeSignup, {
         onSuccess(data) {
-            if (data?.error) console.log('Form error');
-            if (data?.success) console.log('Successfully submitted signup');
+            if (data?.error) console.log('Form error')
+            if (data?.success) console.log('Successfully submitted signup')
         },
         onExecute(data) {
-            console.log('Creating signup');
-        },
+            console.log('Creating signup')
+        }
         // onError(error) {}
-    });
+    })
 
     function onSubmit(values: z.infer<typeof formSchema>) {
-        execute(values);
+        execute(values)
     }
 
     if (status === 'hasSucceeded') {
-        return <Success />;
+        return <Success />
     }
 
     return (
@@ -121,11 +122,28 @@ export function RegisterForm() {
                         </FormItem>
                     )}
                 />
+                <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Phone</FormLabel>
+                            <FormControl>
+                                <Input
+                                    placeholder="Phone"
+                                    className="text-md"
+                                    {...field}
+                                />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
                 <div className="pt-2">
                     <Button
                         disabled={status === 'executing'}
                         type="submit"
-                        className="bg-brand-500 hover:bg-brand-500/90 w-full rounded-full text-white transition-colors duration-200 hover:text-white"
+                        className="w-full rounded-full bg-brand-500 text-white transition-colors duration-200 hover:bg-brand-500/90 hover:text-white"
                     >
                         {status === 'executing' && (
                             <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
@@ -135,5 +153,5 @@ export function RegisterForm() {
                 </div>
             </form>
         </Form>
-    );
+    )
 }
