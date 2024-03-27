@@ -1,62 +1,61 @@
-'use client';
+'use client'
 
-import { useCountDown } from 'ahooks';
+import { useCountDown } from 'ahooks'
+import { useMemo } from 'react'
 
 // components/CountdownTimer.js
 export function Timer() {
-    const [countdown, formattedRes] = useCountDown({
-        targetDate: `${new Date().getFullYear()}-05-07 09:00:00`,
-    });
-    const { days, hours, minutes, seconds, milliseconds } = formattedRes;
-
+    const targetDate = useMemo(() => `${new Date().getFullYear()}-05-07`, [])
+    const [countdown, formattedRes] = useCountDown({ targetDate })
+    const { days, hours, minutes, seconds, milliseconds } = formattedRes
     return (
         <div className="flex justify-center space-x-1 sm:space-x-2">
-            <div className="flex-1 flex flex-col items-center justify-center sm:p-4 backdrop-blur-sm">
+            <div className="flex flex-1 flex-col items-center justify-center backdrop-blur-sm sm:p-4">
                 <span
-                    className="text-2xl sm:text-4xl font-bold text-white"
+                    className="text-2xl font-bold text-white sm:text-4xl"
                     suppressHydrationWarning
                 >
                     {days}
                 </span>
-                <span className="text-xs sm:text-sm font-medium text-white uppercase">
+                <span className="text-xs font-medium uppercase text-white sm:text-sm">
                     Days
                 </span>
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center sm:p-4 backdrop-blur-sm">
+            <div className="flex flex-1 flex-col items-center justify-center backdrop-blur-sm sm:p-4">
                 <span
-                    className="text-2xl sm:text-4xl font-bold text-white"
+                    className="text-2xl font-bold text-white sm:text-4xl"
                     suppressHydrationWarning
                 >
                     {hours}
                 </span>
-                <span className="text-xs sm:text-sm font-medium text-white uppercase">
+                <span className="text-xs font-medium uppercase text-white sm:text-sm">
                     Hours
                 </span>
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center sm:p-4 backdrop-blur-sm">
+            <div className="flex flex-1 flex-col items-center justify-center backdrop-blur-sm sm:p-4">
                 <span
-                    className="text-2xl sm:text-4xl font-bold text-white"
+                    className="text-2xl font-bold text-white sm:text-4xl"
                     suppressHydrationWarning
                 >
                     {minutes}
                 </span>
-                <span className="text-xs sm:text-sm font-medium text-white uppercase">
+                <span className="text-xs font-medium uppercase text-white sm:text-sm">
                     Mins
                 </span>
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center sm:p-4 backdrop-blur-sm">
+            <div className="flex flex-1 flex-col items-center justify-center backdrop-blur-sm sm:p-4">
                 <span
-                    className="text-2xl sm:text-4xl font-bold text-white"
+                    className="text-2xl font-bold text-white sm:text-4xl"
                     suppressHydrationWarning
                 >
                     {seconds}
                 </span>
-                <span className="text-xs sm:text-sm font-medium text-white uppercase">
+                <span className="text-xs font-medium uppercase text-white sm:text-sm">
                     Secs
                 </span>
             </div>
         </div>
-    );
+    )
 }
 
-export default Timer;
+export default Timer
