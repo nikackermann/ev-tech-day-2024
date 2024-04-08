@@ -1,6 +1,7 @@
-import Image from 'next/image';
-import LogoWhite from '@/public/logos/logo-white.svg';
-import PartnerLogos from '@/public/logos/partner-logos.webp';
+import Image from 'next/image'
+import LogoWhite from '@/public/logos/logo-white.svg'
+// import PartnerLogos from '@/public/logos/partner-logos.webp';
+import PartnerLogos from '@/public/logos/partner-logos-2.webp'
 
 export function Logo({ className }: any) {
     return (
@@ -22,7 +23,7 @@ export function Logo({ className }: any) {
                 priority
             />
         </div>
-    );
+    )
 }
 
 export function Logos({ className }: any) {
@@ -30,5 +31,5 @@ export function Logos({ className }: any) {
         <div>
             <Image src={PartnerLogos} alt="Partner Logos" priority />
         </div>
-    );
+    )
 }

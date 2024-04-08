@@ -1,5 +1,5 @@
 'use client'
-
+import ReactMarkdown from 'react-markdown'
 import LogoBlue from '@/public/logos/logo-blue.svg'
 import WitelsLogo from '@/public/logos/witels-logo.png'
 import ZeissLogo from '@/public/logos/zeiss-logo.png'
@@ -8,6 +8,7 @@ import BMLogo from '@/public/logos/bm-logo.png'
 import BSLogo from '@/public/logos/bs-logo.jpg'
 import SchulerLogo from '@/public/logos/schuler-logo.png'
 import TrumpfLogo from '@/public/logos/trumpf-logo.png'
+import DuPontLogo from '@/public/logos/dupont-logo.svg'
 import Image from 'next/image'
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronRightIcon, ChevronUpIcon } from '@radix-ui/react-icons'
@@ -103,6 +104,19 @@ const partners = [
         width: 60,
         height: 40,
         description: `TRUMPF is a technology and market leader in highly versatile machine tools for sheet metal processing and in the field of industrial lasers. The high-tech company offers manufacturing solutions and drives digital connectivity in manufacturing through consulting, platform products and software.`
+    },
+    {
+        name: 'DuPont',
+        logo: DuPontLogo,
+        width: 75,
+        height: 40,
+        description: `DuPont™ NEXT GEN eMobility Solutions offers the ultimate solution for electrical insulation Kapton® systems.
+        - Bringing 50+ years experience in insulation for electric machines.
+        - Corona resistant Kapton® wrapped wire addresses the presence of partial discharge during operation.
+        - Kapton® thin insulation is easily adaptable for thickness requirements to prevent excessive heat buildup.
+        - Kapton® polyimide film enables motors to operate reliably at high voltage with longer lifetimes.
+        - Kapton® polyimide film is dV/dt resistant and can withstand fast-switching SiC/GaN power electronics.
+        `
     }
 ]
 
@@ -117,7 +131,9 @@ export default function Partners() {
                             <ChevronRightIcon className="ui-open:rotate-90 ui-open:transform" />
                         </Disclosure.Button>
                         <Disclosure.Panel className="px-2 pb-2 pt-4 text-sm text-gray-500">
-                            <p>{company.description}</p>
+                            <div className="whitespace-pre-line">
+                                {company.description}
+                            </div>
                             <Image
                                 src={company.logo}
                                 alt={`${company.name} logo`}
