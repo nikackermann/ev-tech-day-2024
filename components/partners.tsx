@@ -1,5 +1,5 @@
 'use client'
-import ReactMarkdown from 'react-markdown'
+
 import LogoBlue from '@/public/logos/logo-blue.svg'
 import WitelsLogo from '@/public/logos/witels-logo.png'
 import ZeissLogo from '@/public/logos/zeiss-logo.png'
