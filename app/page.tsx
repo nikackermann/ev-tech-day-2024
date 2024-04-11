@@ -1,7 +1,7 @@
 import Banner from '@/components/ui/banner'
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import CountDown from '@/components/ui/countdown'
-import { Logo, Logos } from '@/components/ui/logos'
+import { Logo, LogosTop, LogosBottom } from '@/components/ui/logos'
 import { RegisterForm } from '../components/register-form'
 import { Badge } from '@/components/ui/badge'
 import Partners from '@/components/partners'
@@ -25,25 +25,28 @@ export default function Home() {
                 </div>
                 <div className="mx-auto max-w-xl pb-6 text-center text-sm font-light leading-loose tracking-wide text-brandLight sm:text-base md:mt-4 md:text-lg">
                     <Badge
-                        className="mb-2 rounded-full bg-[#E9EFFF] px-5 py-2 text-sm text-brand-500"
+                        className="mb-4 rounded-full bg-[#E9EFFF] px-5 py-2 text-sm text-brand-500"
                         variant="secondary"
                     >
                         MAY 7TH, 2024
                     </Badge>
                 </div>
-                <div className="mx-auto mb-6 max-w-xl lg:mb-0">
+                {/* <div className="mx-auto mb-6 max-w-xl lg:mb-0">
                     <CountDown />
-                </div>
+                </div> */}
                 <div className="md: mb-14 justify-center space-y-8 md:space-y-12">
                     <div className="mx-auto flex w-full max-w-xl flex-col md:px-0">
                         <Card className="flex flex-col">
                             <CardHeader>
-                                <Logos />
+                                <LogosTop />
                             </CardHeader>
                             <CardContent className="flex-grow">
                                 {/* <EventInfo /> */}
                                 <RegisterForm />
                             </CardContent>
+                            <CardFooter>
+                                <LogosBottom />
+                            </CardFooter>
                         </Card>
                     </div>
                     <div className="mx-auto max-w-xl">
@@ -52,7 +55,7 @@ export default function Home() {
                                 <h1>
                                     Event
                                     <mark className="ml-1 rounded-md bg-brand-500 p-1 px-1.5 text-white dark:bg-blue-500">
-                                        Information
+                                        Agenda
                                     </mark>
                                 </h1>
                             </CardHeader>

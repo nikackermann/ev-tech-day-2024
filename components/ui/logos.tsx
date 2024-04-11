@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import LogoWhite from '@/public/logos/logo-white.svg'
 // import PartnerLogos from '@/public/logos/partner-logos.webp';
-import PartnerLogos from '@/public/logos/partner-logos-2.webp'
+import LogoSpreadTop from '@/public/logos/logo-spread-top.webp'
+import LogoSpreadBottom from '@/public/logos/logo-spread-bottom.webp'
 
 export function Logo({ className }: any) {
     return (
@@ -26,10 +27,18 @@ export function Logo({ className }: any) {
     )
 }
 
-export function Logos({ className }: any) {
+export function LogosTop({ className }: any) {
     return (
         <div>
-            <Image src={PartnerLogos} alt="Partner Logos" priority />
+            <Image src={LogoSpreadTop} alt="Partner Logos" priority />
+        </div>
+    )
+}
+
+export function LogosBottom({ className }: any) {
+    return (
+        <div>
+            <Image src={LogoSpreadBottom} alt="Partner Logos" priority />
         </div>
     )
 }
