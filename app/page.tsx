@@ -5,6 +5,7 @@ import { Logo, Logos } from '@/components/ui/logos'
 import { RegisterForm } from '../components/register-form'
 import { Badge } from '@/components/ui/badge'
 import Partners from '@/components/partners'
+import { EventInfo } from '@/components/event-info'
 
 export default function Home() {
     return (
@@ -34,7 +35,7 @@ export default function Home() {
                     <CountDown />
                 </div>
                 <div className="md: mb-14 justify-center space-y-8 md:space-y-12">
-                    <div className="mx-auto flex w-full max-w-lg flex-col md:px-0">
+                    <div className="mx-auto flex w-full max-w-xl flex-col md:px-0">
                         <Card className="flex flex-col">
                             <CardHeader>
                                 <Logos />
@@ -45,7 +46,22 @@ export default function Home() {
                             </CardContent>
                         </Card>
                     </div>
-                    <div className="mx-auto max-w-lg">
+                    <div className="mx-auto max-w-xl">
+                        <Card className="flex flex-col">
+                            <CardHeader className="-mb-3 px-7 text-lg font-bold uppercase">
+                                <h1>
+                                    Event
+                                    <mark className="ml-1 rounded-md bg-brand-500 p-1 px-1.5 text-white dark:bg-blue-500">
+                                        Information
+                                    </mark>
+                                </h1>
+                            </CardHeader>
+                            <CardContent className="flex-grow">
+                                <EventInfo />
+                            </CardContent>
+                        </Card>
+                    </div>
+                    <div className="mx-auto max-w-xl">
                         <Card className="flex flex-col">
                             <CardHeader className="-mb-3 px-7 text-lg font-bold uppercase">
                                 <h1>
