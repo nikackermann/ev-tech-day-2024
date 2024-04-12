@@ -22,8 +22,8 @@ export default function Home() {
                         <Banner />
                     </div>
                     <div className="lg:text-md text-center text-xs font-light text-brandLight md:text-base">
-                        WAFIOS, with our partners invite you to the Second
-                        Annual
+                        Join us for the Second Annual EV Tech Day, proudly
+                        hosted by WAFIOS and our partners.
                     </div>
                 </div>
                 <div className="mx-auto max-w-xl pb-6 text-center text-sm font-light leading-loose tracking-wide text-brandLight sm:text-base md:mt-4 md:text-lg">
