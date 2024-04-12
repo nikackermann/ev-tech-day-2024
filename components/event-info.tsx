@@ -29,11 +29,11 @@ export function EventInfo() {
                 <TableBody>
                     <TableRow>
                         <TableCell>Doors open to attendees</TableCell>
-                        <TableCell className="font-mono">09:00 AM</TableCell>
+                        <TableCell>09:00 AM</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Educational Sessions I</TableCell>
-                        <TableCell className="font-mono">
+                        <TableCell>
                             <div>10:00 AM - Welcome, Markus Arnold (WMC)</div>
                             <div>
                                 10:05 AM - 10:25 AM: Live-Demo BMF, Stefan Münz
@@ -51,25 +51,19 @@ export function EventInfo() {
                     </TableRow>
                     <TableRow>
                         <TableCell>Networking/machine demos</TableCell>
-                        <TableCell className="font-mono">
-                            11:30 AM - 12:00 PM
-                        </TableCell>
+                        <TableCell>11:30 AM - 12:00 PM</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Lunch</TableCell>
-                        <TableCell className="font-mono">
-                            12:00 PM - 01:00 PM
-                        </TableCell>
+                        <TableCell>12:00 PM - 01:00 PM</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Networking/machine demos</TableCell>
-                        <TableCell className="font-mono">
-                            01:00 PM - 01:30 PM
-                        </TableCell>
+                        <TableCell>01:00 PM - 01:30 PM</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Educational Sessions II</TableCell>
-                        <TableCell className="font-mono">
+                        <TableCell>
                             <div>
                                 01:30 PM - 01:50 PM: Technology Presentation,
                                 Marcell Wardin (Gehring)
@@ -79,18 +73,18 @@ export function EventInfo() {
                                 Trumpf • HPW • DuPont • Brockhaus • Zeiss •
                                 Schuler
                             </div>
-                            <div>Balance Systems • Witels-Albert • Streck</div>
+                            <div>
+                                Balance Systems • Witels-Albert • Strecker
+                            </div>
                         </TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>Networking/machine demos</TableCell>
-                        <TableCell className="font-mono">
-                            03:00 PM - 05:00 PM
-                        </TableCell>
+                        <TableCell>03:00 PM - 05:00 PM</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>End of show</TableCell>
-                        <TableCell className="font-mono">05:00 PM</TableCell>
+                        <TableCell>05:00 PM</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>
