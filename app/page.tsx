@@ -6,6 +6,9 @@ import { RegisterForm } from '../components/register-form'
 import { Badge } from '@/components/ui/badge'
 import Partners from '@/components/partners'
 import { EventInfo } from '@/components/event-info'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import DaveF from '@/public/davef.webp'
+import Image from 'next/image'
 
 export default function Home() {
     return (
@@ -61,6 +64,56 @@ export default function Home() {
                             </CardHeader>
                             <CardContent className="flex-grow">
                                 <EventInfo />
+                            </CardContent>
+                        </Card>
+                    </div>
+                    <div className="mx-auto max-w-xl">
+                        <Card className="flex flex-col">
+                            <CardHeader className="-mb-3 px-7 text-lg font-bold uppercase">
+                                <h1>
+                                    Event
+                                    <mark className="ml-1 rounded-md bg-brand-500 p-1 px-1.5 text-white dark:bg-blue-500">
+                                        Keynote
+                                    </mark>
+                                </h1>
+                            </CardHeader>
+                            <CardContent className="flex-grow pb-6 pt-8">
+                                <div className="p-6dark:bg-gray-800 flex flex-col items-center gap-6">
+                                    <h2 className="text-center text-2xl font-bold">
+                                        The Evolution of Motor Manufacturing
+                                        Technology
+                                    </h2>
+                                    <h3 className="text-center text-xl font-semibold">
+                                        Dave Fulton
+                                    </h3>
+                                    <div className="flex h-32 w-32 items-center justify-center overflow-hidden rounded-full">
+                                        <Image
+                                            src={DaveF}
+                                            alt="Dave Fulton"
+                                            className="h-auto w-full object-cover"
+                                        />
+                                    </div>
+                                    <p className="text-center text-gray-600 dark:text-gray-400">
+                                        Dave Fulton is the Director of Electric
+                                        Machine Innovation in BorgWarner
+                                        PowerDrive Systems. In this role, he
+                                        leads machine product & process
+                                        technology development, to provide
+                                        competitive advantage in electric and
+                                        hybrid vehicle powertrains. Prior to
+                                        joining BorgWarner, David spent more
+                                        than 20 years at Remy International,
+                                        where he held various engineering and
+                                        management positions. He is
+                                        inventor/co-inventor on 30 U.S. patents,
+                                        a licensed professional engineer, and a
+                                        member of SAE and IEEE. David received
+                                        bachelor’s and master’s degrees in
+                                        mechanical engineering from Valparaiso
+                                        University and Northwestern University,
+                                        respectively.
+                                    </p>
+                                </div>
                             </CardContent>
                         </Card>
                     </div>
