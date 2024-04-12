@@ -9,6 +9,7 @@ import BSLogo from '@/public/logos/bs-logo.jpg'
 import SchulerLogo from '@/public/logos/schuler-logo.png'
 import TrumpfLogo from '@/public/logos/trumpf-logo.png'
 import DuPontLogo from '@/public/logos/dupont-logo.svg'
+import Coiltechlogo from '@/public/logos/coiltech-logo.webp'
 import Image from 'next/image'
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronRightIcon, ChevronUpIcon } from '@radix-ui/react-icons'
@@ -117,6 +118,13 @@ const partners = [
         - Kapton® polyimide film enables motors to operate reliably at high voltage with longer lifetimes.
         - Kapton® polyimide film is dV/dt resistant and can withstand fast-switching SiC/GaN power electronics.
         `
+    },
+    {
+        name: 'Coiltech',
+        logo: Coiltechlogo,
+        width: 200,
+        height: 100,
+        description: ''
     }
 ]
 
